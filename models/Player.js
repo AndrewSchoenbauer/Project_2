@@ -8,7 +8,7 @@ class Player extends Model {
     }
 }
 
-User.init(
+Player.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -16,7 +16,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        player: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -51,7 +51,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'player',
     }
 );
 
