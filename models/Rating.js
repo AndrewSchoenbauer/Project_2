@@ -20,11 +20,11 @@ Rating.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        player_name: {
-            type: DataTypes.STRING,
+        player_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'player',
-                key: 'name',
+                key: 'id',
             },
         },
     },
@@ -33,7 +33,7 @@ Rating.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: Rating,
+        modelName: 'rating',
     }
 );
 
