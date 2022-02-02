@@ -1,11 +1,11 @@
 :root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --tertiary: #5e877f;
-    --quatrinary: #6c6b67;
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
+    --primary: rgba(0, 0, 0, 0.411) ;
+    --secondary: #e26821;
+    --tertiary: #ca8c2f;
+    --quatrinary: #aa5353;
+    --light: #ffffff;
+    --dark: #b89f5c;
+    --error: rgb(212, 179, 32);
     --border-radius: 0.3rem;
   }
   
@@ -116,15 +116,15 @@
   }
   
   .login-card {
-    margin: 0 0 20px 0;
+    margin: 0 15px 20px 2px;
     flex: 0 0 50%;
-    max-width: 50%;
-    padding: 5px;
+    max-width: 70%;
+    padding: 5px ;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
     border-style: double;
-    border-width: thick;
-    background-color: #577a7c;
+    border-width: 5px;
+    background-color: #bb9b34;
     color: var(--light);
   }
   
