@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Player } = require('../../models');
 
+
 router.post('/', async (req, res) => {
     try {
         const loginData = await Player.create(req.body);
