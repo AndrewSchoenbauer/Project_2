@@ -1,19 +1,23 @@
 const router = require('express').Router();
-const { Player, Review } = require('../models');
+const { Game, Rating, Review } = require('../models');
 const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
-        const reviewData = await Review.findAll({
+        const gameData = await Game.findAll({
             include: [
                 {
-                    model: Player,
-                    attributes: ['name'],
+                    model: Review,
+                    attributes: ['description'],
                 },
+                {
+                    model: Rating,
+                    attributes: ['rating'],
+                }
             ],
         });
 
 
-        const reviews = reviewData.map((review) => review.get({ plain: true }));
+        const reviews = gameData.map((game) => game.get({ plain: true }));
 
         res.render('homepage', {
             reviews,
