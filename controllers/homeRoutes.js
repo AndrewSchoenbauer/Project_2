@@ -15,10 +15,22 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/game/:id', async (req, res) => {
+    try {
+        const gameData = await Game.findByPk(req.params.id);
 
+        const games = gameData.get({ plain: true });
+
+        res.render('game', {
+            ...games,
+            // logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
         res.redirect('/profile');
         return;
