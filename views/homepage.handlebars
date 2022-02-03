@@ -1,0 +1,11 @@
+<!-- Loop over each object in the projects array -->
+{{#each games as |game| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+      <a href="/game/{{game_id}}">
+      {{game.name}}
+    </a>
+    <p>Created by {{game.developer}} in {{ game.release_day}}</p>
+  </div>
+</div>
+{{/each}}

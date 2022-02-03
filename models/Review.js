@@ -25,8 +25,17 @@ Review.init(
         },
         player_id: {
             type: DataTypes.INTEGER,
+            allowNull: true,
             references: {
                 model: 'player',
+                key: 'id',
+            },
+        },
+        game_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'game',
                 key: 'id',
             },
         },
