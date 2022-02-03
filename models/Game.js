@@ -21,22 +21,6 @@ Game.init(
         developer: {
             type: DataTypes.STRING,
         },
-        // review_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: true,
-        //     references: {
-        //         model: 'review',
-        //         key: 'id'
-        //     },
-        // },
-        // rating_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: true,
-        //     references: {
-        //         model: 'rating',
-        //         key: 'id',
-        //     },
-        // }
     },
     {
         sequelize,
