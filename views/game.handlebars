@@ -1,7 +1,16 @@
 <div class="text-center">
-    <h2>{{name}}</h2>
-    <p>Created by {{developer}} on {{release_day}}</p>
+    <h2>{{games.name}}</h2>
+    <p>Created by {{games.developer}} on {{games.release_day}}</p>
     <p>
         <button class="btn btn-primary">Add A Review!!</button>
     </p>
+    {{#each reviews as |rvData|}}
+    {{#each rvData.reviews as |reviewInfo| }}
+    <div>
+        <h2>{{reviewInfo.Title}}</h2>
+        <h3>{{reviewInfo.description}}</h3>
+    </div>
+    {{/each}}
+    {{/each}}
 </div>
+
