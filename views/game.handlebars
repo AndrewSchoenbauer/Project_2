@@ -7,8 +7,8 @@
     {{#each reviews as |rvData|}}
     {{#each rvData.reviews as |reviewInfo| }}
     <div>
-        <h2>{{reviewInfo.Title}}</h2>
-        <h3>{{reviewInfo.description}}</h3>
+        <li>{{reviewInfo.Title}}</li>
+        <ul>{{reviewInfo.description}}</ul>
     </div>
     {{/each}}
     {{/each}}
