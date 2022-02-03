@@ -20,19 +20,19 @@ Rating.belongsTo(Player, {
 });
 
 Game.hasMany(Review, {
-    foreignKey: 'review_id'
+    foreignKey: 'game_id'
 });
 
 Review.belongsTo(Game, {
-    foreignKey: 'review_id'
+    foreignKey: 'game_id'
 });
 
 Game.hasMany(Rating, {
-    foreignKey: 'rating_id'
+    foreignKey: 'game_id'
 });
 
 Rating.belongsTo(Game, {
-    foreignKey: 'rating_id'
+    foreignKey: 'game_id'
 });
 
-module.exports = { Player, Review, Rating };
+module.exports = { Player, Review, Rating, Game };
