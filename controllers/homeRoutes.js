@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Game } = require('../models');
+const { Game, Review } = require('../models');
 const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
@@ -18,18 +18,27 @@ router.get('/', async (req, res) => {
 router.get('/game/:id', async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
-
-        const games = gameData.get({ plain: true });
-
-        res.render('game', {
-            ...games,
-            // logged_in: req.session.logged_in
+        const reviewData = await Game.findAll({
+            include: [{
+                model: Review,
+                where: {
+                    game_id: req.params.id
+                }
+            }]
         });
+        const games = gameData.get({ plain: true });
+        const reviews = reviewData.map(review=>review.get({ plain: true }));
+        const dataGame = {
+            games,
+            reviews
+        }
+
+        res.render('game', dataGame)
+
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/profile');
