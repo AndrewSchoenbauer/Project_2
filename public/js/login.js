@@ -20,6 +20,7 @@ const loginFormHandler = async (event) => {
 };
 
 const signupFormHandler = async (event) => {
+  console.log("hello");
   event.preventDefault();
 
   const name = document.querySelector('#username-signup').value.trim();
@@ -34,7 +35,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/game');
+      document.location.replace('/');
     } else {
       alert('Failed to sign up.');
     }
@@ -46,5 +47,5 @@ document
   .addEventListener('submit', loginFormHandler);
 
 document
-  .getElementById('sign_up')
+.querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
