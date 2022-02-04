@@ -30,9 +30,10 @@ router.get('/game/:id', async (req, res) => {
         const reviews = reviewData.map(review=>review.get({ plain: true }));
         const dataGame = {
             games,
-            reviews
+            reviews,
+            logged_in: req.session.logged_in
         }
-
+        console.log(req.session.logged_in);
         res.render('game', dataGame)
 
     } catch (err) {
