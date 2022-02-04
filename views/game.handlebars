@@ -3,6 +3,7 @@
     <p>Created by {{games.developer}} on {{games.release_day}}</p>
     <p>
         <button id="main-btn" class="btn btn-primary">Add A Review!!</button>
+         <button id="save-btn" class="btn btn-primary" data-gameid="{{games.id}}" data-playerid = {{player_id}}>Save this Game</button>
     </p>
     {{!-- Review Form --}}
 
@@ -31,6 +32,7 @@
     <div>
         <li>{{reviewInfo.Title}}</li>
         <ul>{{reviewInfo.description}}</ul>
+         <ul>{{reviewInfo.player_name}}</ul>
     </div>
     {{/each}}
     {{/each}}
@@ -38,5 +40,6 @@
 
  {{#if logged_in}}
     <script src="/js/addReview.js"></script>
+     <script src="/js/savegame.js"></script>
 
   {{/if}}

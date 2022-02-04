@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/game/:id', async (req, res) => {
+router.get('/game/:id', withAuth, async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
         const reviewData = await Game.findAll({
@@ -32,7 +32,8 @@ router.get('/game/:id', async (req, res) => {
         const dataGame = {
             games,
             reviews,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            player_id: req.session.player_id
         }
         console.log(req.session.logged_in);
         res.render('game', dataGame)
