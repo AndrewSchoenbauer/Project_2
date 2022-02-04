@@ -21,6 +21,10 @@ Game.init(
         developer: {
             type: DataTypes.STRING,
         },
+        image: {
+            type: DataTypes.STRING,
+        },
+
     },
     {
         sequelize,
