@@ -1,11 +1,12 @@
 <!-- Loop over each object in the projects array -->
-<div class="row mb-4 project">
+<div class="row mb-5 project">
 {{#each games as |game| }}
-  <div class="col-md-3">
-    <img src="{{game.image}}" width="200px">
-      <a href="/game/{{game.id}}">
+  <div class="col-md-3 centext">
+  <a href="/game/{{game.id}}"><img src="{{game.image}}" width="200px"></a>
+      {{!-- <a href="/game/{{game.id}}">
       {{game.name}}
-    </a>
+    </a> --}}
+    <p>{{game.name}}</p>
     <p>Created by {{game.developer}} in {{ game.release_day}}</p>
   </div>
 {{/each}}
