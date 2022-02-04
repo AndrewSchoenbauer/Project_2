@@ -28,6 +28,7 @@ router.get('/game/:id', async (req, res) => {
         });
         const games = gameData.get({ plain: true });
         const reviews = reviewData.map(review=>review.get({ plain: true }));
+        // console.log(reviews)
         const dataGame = {
             games,
             reviews
