@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const { Review } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
   try {
     const newReview = await Review.create({
       ...req.body,
       player_id: req.session.player_id,
-      game_id: req.body.game_id,
+      game_id: req.params.id,
     });
 
     res.status(200).json(newReview);
