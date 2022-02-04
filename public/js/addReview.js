@@ -19,6 +19,16 @@ const subRevFormHandler = async (event) => {
     }
 };
 
+const remove = function () {
+    const cardEl = document.getElementById('review-card');
+    cardEl.classList.remove('hide');
+}
+
+document.getElementById("main-btn").addEventListener('click', remove);
+
 document
-    .querySelector('.add-review')
-    .addEventListener('submit', subRevFormHandler);
+    .querySelector('.add-review-btn')
+    .addEventListener('submit', subRevFormHandler)
+    .classList.add('hide')
+
+console.log("hello");
