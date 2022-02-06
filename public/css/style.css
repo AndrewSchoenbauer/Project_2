@@ -180,7 +180,10 @@
     margin-top: 2px;
   }
 
-  .review-card, .rev-card-title, .review-card-col, .review-card-column {
+  .review-card,
+  .rev-card-title,
+  .review-card-col,
+  .review-card-column {
     border: solid 3px rgb(253, 140, 47);
     border-radius: 5px;
     width: fit-content;
