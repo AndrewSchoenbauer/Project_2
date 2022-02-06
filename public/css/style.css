@@ -170,5 +170,35 @@
     text-align: center;
     border: solid 3px rgb(253, 140, 47);
     border-radius: 5px;
-    padding-top: 5px;
+    padding-top: 2px;
+  }
+
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 2px;
+  }
+
+  .review-card,
+  .rev-card-title,
+  .review-card-col,
+  .review-card-column {
+    border: solid 3px rgb(253, 140, 47);
+    border-radius: 5px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rev-card-title {
+    border: solid 3px rgb(212, 179, 32);
+  }
+
+  .review-card-col {
+    border: solid 3px rgb(212, 179, 32);
+  }
+
+  .review-card-column {
+    border: solid 3px rgb(212, 179, 32);
   }
