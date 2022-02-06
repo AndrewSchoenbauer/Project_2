@@ -4,7 +4,8 @@
     <p>Created by {{games.developer}} on {{games.release_day}}</p>
     <p>
         <button id="main-btn" class="btn btn-primary">Add A Review!!</button>
-         <button id="save-btn" class="btn btn-primary" data-gameid="{{games.id}}" data-playerid = {{player_id}}>Save this Game</button>
+        <button id="save-btn" class="btn btn-primary" data-gameid="{{games.id}}" data-playerid={{player_id}}>Save this
+            Game</button>
     </p>
     {{!-- Review Form --}}
 
@@ -21,7 +22,8 @@
                     <input class="form-input" type="input" id="review-text" />
                 </div>
                 <div class="form-group">
-                    <button id="add-review-btn" class="btn btn-primary" type="submit" data-gameID="{{games.id}}">add</button>
+                    <button id="add-review-btn" class="btn btn-primary" type="submit"
+                        data-gameID="{{games.id}}">add</button>
                 </div>
             </form>
 
@@ -30,17 +32,21 @@
 
     {{#each reviews as |rvData|}}
     {{#each rvData.reviews as |reviewInfo| }}
-    <div>
-        <li>{{reviewInfo.Title}}</li>
-        <ul>{{reviewInfo.description}}</ul>
-         <ul>{{reviewInfo.player_name}}</ul>
+    <div class="review-card">
+        <h1 class="rev-card-title">{{reviewInfo.Title}}</h1>
+        <div class="review-card-col">
+            <p>{{reviewInfo.description}}</p>
+        </div>
+        <div class="review-card-column">
+            <p>Posted by: {{reviewInfo.player_id}}</p>
+        </div>
     </div>
     {{/each}}
     {{/each}}
 </div>
 
- {{#if logged_in}}
-    <script src="/js/addReview.js"></script>
-     <script src="/js/savegame.js"></script>
+{{#if logged_in}}
+<script src="/js/addReview.js"></script>
+<script src="/js/savegame.js"></script>
 
-  {{/if}}
+{{/if}}
