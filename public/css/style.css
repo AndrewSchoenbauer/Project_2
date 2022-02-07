@@ -88,9 +88,15 @@
   }
   
   img {
-    max-width: 100%;
-    height: auto;
+    width: 700px;
+    height: 900px;
   }
+  .homepageImg {
+    max-width:  100%;
+    width: 300px;
+    height: 400px;
+    /* object-fit: cover; */
+}
   
   .painting {
     width: 50%;
