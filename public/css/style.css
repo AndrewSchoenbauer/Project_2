@@ -203,6 +203,17 @@
     border: solid 3px rgb(212, 179, 32);
   }
 
+
+  .savedAnchor {
+    justify-content: space-between;
+    display: flex;
+    padding: 5px;
+    border: solid 2px rgb(253, 140, 47);
+    margin-top: 3px;
+    border-radius: 5px;
+  }
+
   .checked {
     color: orange;
 }
+

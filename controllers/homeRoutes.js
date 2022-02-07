@@ -50,4 +50,16 @@ router.get('/login', (req, res) => {
 
     res.render('login');
 });
+
+router.get('/savedgames/:id', async(req, res)=>{
+    const gameArray = req.params.id.split(",")
+    const savedGameData = await Game.findAll({
+        where: {
+            id : gameArray
+        }
+    })
+    const thisGames = savedGameData.map(game=>game.get({plain:true}))
+    // const thisGames = savedGameData.get({plain:true})
+    res.json(thisGames)
+})
 module.exports = router;
