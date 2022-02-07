@@ -8,8 +8,9 @@ router.post('/:id', async (req, res) => {
       player_id: req.session.player_id,
       game_id: req.params.id,
     });
-
-    res.status(200).json(newReview);
+    console.log(newReview);
+    const data = {newReview}
+    res.status(200).json(data);
   } catch (err) {
     res.status(400).json(err);
   }

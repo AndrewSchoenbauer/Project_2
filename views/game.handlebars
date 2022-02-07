@@ -21,17 +21,18 @@
                     <label for="review-text">review:</label>
                     <input class="form-input" type="input" id="review-text" />
                 </div>
+                <div class="star-conatiner">
+                    <button id="starOne" class="fa fa-star" data-num="1"></button>
+                    <button id="starTwo" class="fa fa-star" data-num="2"></button>
+                    <button id="starThree" class="fa fa-star" data-num="3"></button>
+                    <button id="starFour" class="fa fa-star" data-num="4"></button>
+                    <button id="starFive" class="fa fa-star" data-num="5"></button>
+                </div>
                 <div class="form-group">
                     <button id="add-review-btn" class="btn btn-primary" type="submit"
                         data-gameID="{{games.id}}">add</button>
                 </div>
-                <div class="star-conatiner">
-                    <button id="starOne" class="fa fa-star"></button>
-                    <button id="starTwo" class="fa fa-star"></button>
-                    <button id="starThree" class="fa fa-star"></button>
-                    <button id="starFour" class="fa fa-star"></button>
-                    <button id="starFive" class="fa fa-star"></button>
-                </div>
+
             </form>
 
         </div>
@@ -44,11 +45,13 @@
         <div class="review-card-col">
             <p>{{reviewInfo.description}}</p>
         </div>
+        <div class="rating-card">
+            <div class="review-card-col">
+                <p>{{reviewInfo.rating}}</p>
+            </div>
+        </div>
         <div class="review-card-column">
             <p>Posted by: {{reviewInfo.player_id}}</p>
-        </div>
-        <div>
-            
         </div>
     </div>
     {{/each}}
@@ -56,8 +59,8 @@
 </div>
 
 {{#if logged_in}}
+<script src="/js/rating.js"></script>
 <script src="/js/addReview.js"></script>
 <script src="/js/savegame.js"></script>
-<script src="/js/rating.js"></script>
 
 {{/if}}
