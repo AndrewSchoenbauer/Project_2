@@ -41,17 +41,25 @@
     {{#each reviews as |rvData|}}
     {{#each rvData.reviews as |reviewInfo| }}
     <div class="review-card">
-        <h1 class="rev-card-title">{{reviewInfo.Title}}</h1>
+        <h2>Title</h2>
+        <p class="rev-card-title">{{reviewInfo.Title}}</p>
+        <div>
+            <h2>Review</h2>
+        </div>
         <div class="review-card-col">
             <p>{{reviewInfo.description}}</p>
         </div>
         <div class="rating-card">
+            <h2>Rating</h2>
             <div class="review-card-col">
-                <p>{{reviewInfo.rating}}</p>
+                
+                <p>{{reviewInfo.rating}}/5</p>
             </div>
         </div>
+        <h2>Player ID</h2>
         <div class="review-card-column">
-            <p>Posted by: {{reviewInfo.player_id}}</p>
+            
+            <p>{{reviewInfo.player_id}}</p>
         </div>
     </div>
     {{/each}}
