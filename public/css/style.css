@@ -68,7 +68,7 @@
   
   .gallery {
     flex: 4;
-    background-color: gray;
+    background: linear-gradient(black, rgb(133, 60, 1));
     padding: 50px;
     display: flex;
     flex-flow: row wrap;
@@ -228,6 +228,12 @@
   .checked {
     color: orange;
 }
-.btn-primary {
+.btn-color {
   background-color: var(--tertiary);
+}
+.homepagecolor {
+  color: var(--tertiary);
+}
+.titlegame {
+  color: var(--secondary)
 }
