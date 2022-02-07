@@ -13,6 +13,7 @@ const saveGameHandler =  (event) => {
             console.log("hello for", savedGamesList[i], playerId);
             if(savedGamesList[i].playerId === playerId){
                 console.log("hello if");
+                document.location.replace('/game/' +gameId)
                 savedGamesList[i].savedgames.push(gameId)
                 // return;
                 break;
