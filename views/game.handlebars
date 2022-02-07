@@ -25,6 +25,13 @@
                     <button id="add-review-btn" class="btn btn-primary" type="submit"
                         data-gameID="{{games.id}}">add</button>
                 </div>
+                <div class="star-conatiner">
+                    <button id="starOne" class="fa fa-star"></button>
+                    <button id="starTwo" class="fa fa-star"></button>
+                    <button id="starThree" class="fa fa-star"></button>
+                    <button id="starFour" class="fa fa-star"></button>
+                    <button id="starFive" class="fa fa-star"></button>
+                </div>
             </form>
 
         </div>
@@ -40,6 +47,9 @@
         <div class="review-card-column">
             <p>Posted by: {{reviewInfo.player_id}}</p>
         </div>
+        <div>
+            
+        </div>
     </div>
     {{/each}}
     {{/each}}
@@ -48,5 +58,6 @@
 {{#if logged_in}}
 <script src="/js/addReview.js"></script>
 <script src="/js/savegame.js"></script>
+<script src="/js/rating.js"></script>
 
 {{/if}}
