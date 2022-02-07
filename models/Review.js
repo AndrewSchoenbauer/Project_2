@@ -18,6 +18,9 @@ Review.init(
         description: {
             type: DataTypes.STRING,
         },
+        rating: {
+            type: DataTypes.INTEGER,
+        },
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,

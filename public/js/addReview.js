@@ -5,17 +5,17 @@ const subRevFormHandler = async (event) => {
 
     const Title = document.querySelector('#review-title').value.trim();
     const description = document.querySelector('#review-text').value.trim();
+    console.log(rating);
+
     const gameId = event.target.dataset.gameid;
 
-    if (Title && description) {
+    if (Title && description && rating) {
         const response = await fetch('/api/game/' + gameId, {
             method: 'POST',
-            body: JSON.stringify({ Title, description }),
+            body: JSON.stringify({ Title, description, rating }),
             headers: { 'Content-Type': 'application/json' },
         });
-
         if (response.ok) {
-            // console.log("hello")
             document.location.replace('/game/' + gameId);
             cardEl.classList.add('hide')
         } else {
