@@ -16,7 +16,8 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    /* background-color: var(--quatrinary); */
+    background-image: url(https://wallpaperaccess.com/full/1236512.jpg);
   }
   
   a {
@@ -33,6 +34,8 @@
     text-align: center;
     background: var(--primary);
     color: var(--light);
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/002/071/470/small/abstract-orange-and-yellow-gradient-stripes-motion-blur-on-black-background-texture-vector.jpg);
+    opacity: 100%;
   }
   
   main {
@@ -43,7 +46,8 @@
   
   aside {
     flex: 0;
-    background-color: var(--tertiary);
+    /* background-color: var(--tertiary); */
+    background-image: url(https://wallpaperaccess.com/full/1236512.jpg);
     padding: 80px;
     text-align: left;
     color: var(--light);
@@ -68,7 +72,7 @@
   
   .gallery {
     flex: 4;
-    background: linear-gradient(black, rgb(133, 60, 1));
+    /* background: linear-gradient(black, rgb(133, 60, 1)); */
     padding: 50px;
     display: flex;
     flex-flow: row wrap;
@@ -185,7 +189,7 @@
     padding: 5px;
     margin-top: 15px;
     width: 100%;
-    background-color: var(--quatrinary);
+    background-color: var(--tertiary);
   }
 
   .review-card,
