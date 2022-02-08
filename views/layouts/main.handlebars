@@ -15,16 +15,16 @@
     <h1>ACH Game Review</h1>
   </header>
   <nav>
-    <a href="/">Home</a>
+    <a class="homeBtn" href="/">Home</a>
     {{#if logged_in}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="btn-no-style homeBtn">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a class="homeBtn" href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
     <aside>
-      <h2>Saved game</h2>
+      <h2>Saved Games</h2>
       <form id="saved"></form>
     </aside>
     <div class="gallery">
